@@ -22,7 +22,7 @@ services:
     deploy:
       replicas: 3
 
-  app_service:
+  frontend_service:
     image: chandrikadevops/cloud:appimage
     ports:
       - "5000:5000"   # ONLY this should have port

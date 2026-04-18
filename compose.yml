@@ -30,8 +30,8 @@ services:
     deploy:
       replicas: 3
 
-  app_service:
-    image: chandrikadevops/cloud:appimage
+  frontend_service:
+    image: chandrikadevops/cloud:frontendimage
     ports:
       - "5000:5000"
     deploy:

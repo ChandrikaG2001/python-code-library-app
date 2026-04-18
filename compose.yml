@@ -3,35 +3,35 @@ version: "3.9"
 
 services:
   db:
-    image: chandrikadevops/repooo:dbimage
+    image: chandrikadevops/cloud:dbimage
     ports:
       - "3306:3306"
     deploy:
       replicas: 3
 
   auth_service:
-    image: chandrikadevops/repooo:authimage
+    image: chandrikadevops/cloud:authimage
     ports:
       - "5001:5001"
     deploy:
       replicas: 3
 
   book_service:
-    image: chandrikadevops/repooo:bookimage
+    image: chandrikadevops/cloud:bookimage
     ports:
       - "5002:5002"
     deploy:
       replicas: 3
 
   borrow_service:
-    image: chandrikadevops/repooo:borrowimage
+    image: chandrikadevops/cloud:borrowimage
     ports:
       - "5003:5003"
     deploy:
       replicas: 3
 
   frontend_service:
-    image: chandrikadevops/repooo:frontendimage
+    image: chandrikadevops/cloud:frontendimage
     ports:
       - "5000:5000"
     deploy:

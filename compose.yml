@@ -1,38 +1,30 @@
----
 version: "3.9"
 
 services:
+
   db:
     image: chandrikadevops/cloud:dbimage
-    ports:
-      - "3306:3306"
     deploy:
-      replicas: 3
+      replicas: 1   # IMPORTANT (not 3)
 
   auth_service:
     image: chandrikadevops/cloud:authimage
-    ports:
-      - "5001:5001"
     deploy:
       replicas: 3
 
   book_service:
     image: chandrikadevops/cloud:bookimage
-    ports:
-      - "5002:5002"
     deploy:
       replicas: 3
 
   borrow_service:
     image: chandrikadevops/cloud:borrowimage
-    ports:
-      - "5003:5003"
     deploy:
       replicas: 3
 
   frontend_service:
     image: chandrikadevops/cloud:frontendimage
     ports:
-      - "5000:5000"
+      - "5000:5000"   # ONLY this should have port
     deploy:
       replicas: 3
